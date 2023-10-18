@@ -277,3 +277,57 @@ p {
 .form__privacy span {
       text-decoration: underline;
 }
+
+/* ---------------------------- Модальное окно ---------------------------- */
+body.modal{
+      overflow-y: hidden;
+}
+.modal-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #26262680;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+}
+.modal-bg.active {
+      opacity: 1;
+      visibility: visible;
+}
+.modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      position: fixed;
+      max-width: 485px;
+      width: 100%;
+      height: 180px;
+      padding: 20px;
+      left: calc(50% - 485px / 2);
+      top: calc(50% - 180px / 2);
+      border-radius: 10px;
+      background: #fcfcfc;
+      transition: .5s;
+
+      opacity: 0;
+      visibility: hidden;
+}
+.modal.active{
+      opacity: 1;
+      visibility: visible;
+}
+.modal h3,
+.modal p,
+.modal span{
+      color: #0E0905;
+      padding: 0;
+      text-transform: none;
+}
+.modal__close{
+      align-self: flex-end;
+}
