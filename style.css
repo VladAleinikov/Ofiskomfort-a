@@ -182,6 +182,7 @@ p {
       display: flex;
       align-items: center;
       gap: 20px;
+      width: fit-content;
       padding: 10px;
       padding-right: 20px;
       border-radius: 20px;
