@@ -1,7 +1,7 @@
-/* -------------- Подключение шрифтов -------------- */
+/* ---------------------------- Подключение шрифтов ---------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap");
 
-/* -------------- Стили по умолчанию -------------- */
+/* ---------------------------- Стили по умолчанию ---------------------------- */
 * {
       padding: 0;
       margin: 0;
@@ -86,7 +86,7 @@ p {
       margin: auto;
 }
 
-/* -------------- Header -------------- */
+/* ---------------------------- Header ---------------------------- */
 .header {
       width: 100%;
       padding: 20px 0;
@@ -121,4 +121,159 @@ p {
 .legal-info__title {
       display: flex;
       gap: 16px;
+}
+
+/* ---------------------------- Hero ---------------------------- */
+.hero {
+      padding-top: 72px;
+      padding-bottom: 60px;
+      background-image: url("./assets/hero-bg-desc.png");
+      background-position: right;
+      background-repeat: no-repeat;
+}
+.hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 67px;
+      justify-content: space-between;
+}
+/* -------------- Заголовок страницы -------------- */
+.hero__title {
+      max-width: 1000px;
+}
+/* -------------- Предоставляемые услуги -------------- */
+.hero__services {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fff;
+}
+.services__item {
+      padding: 2px 0;
+      position: relative;
+      padding-left: 60px;
+      color: #1c1c1c;
+      font-size: 26px;
+      font-weight: 500;
+}
+.services__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url("./assets/icons/triangle-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+}
+/* -------------- Контакты -------------- */
+.hero__contacts {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+}
+.contacts__link a {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+      padding-right: 20px;
+      border-radius: 20px;
+      border: 1px solid #1c1c1c;
+      transition: 0.5s;
+
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+}
+.link__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 67px;
+      height: 67px;
+      border-radius: 100%;
+      background: #028362;
+      transition: 0.5s;
+}
+.link__icon path {
+      transition: 0.5s;
+}
+.contacts__link a:hover {
+      color: #f3f4f8;
+      background: #028362;
+      border: 1px solid #028362;
+}
+.contacts__link a:hover .link__icon {
+      background: #f3f4f8;
+}
+.contacts__link a:hover .link__icon path {
+      fill: #028362;
+}
+/* -------------- Форма -------------- */
+.hero__form {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 50px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      border-radius: 10px;
+      background: rgba(2, 131, 98, 0.52);
+      backdrop-filter: blur(10px);
+}
+.hero__form h2 {
+      margin-bottom: 11px;
+}
+.form__input,
+.form__textarea {
+      width: 100%;
+      padding: 14px 10px 14px 20px;
+      border-radius: 5px;
+      background: #fff;
+
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 140%; /* 23.8px */
+}
+.form__textarea {
+      height: 120px;
+      resize: none;
+}
+.form__btn {
+      cursor: pointer;
+      width: 100%;
+      padding: 14px 0;
+      border-radius: 5px;
+      background: #1e5c4c;
+      box-shadow: 0px 0px 24px -1px #ededfe;
+      transition: 0.5s;
+
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%; /* 28px */
+      text-transform: uppercase;
+}
+.form__btn:hover {
+      background: #028362;
+}
+.form__privacy,
+.form__privacy span {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 140%; /* 22.4px */
+      text-transform: none;
+}
+.form__privacy span {
+      text-decoration: underline;
 }
