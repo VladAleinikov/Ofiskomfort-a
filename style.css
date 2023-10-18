@@ -279,7 +279,7 @@ p {
 }
 
 /* ---------------------------- Модальное окно ---------------------------- */
-body.modal{
+body.modal-active{
       overflow-y: hidden;
 }
 .modal-bg {
@@ -312,6 +312,7 @@ body.modal{
       top: calc(50% - 180px / 2);
       border-radius: 10px;
       background: #fcfcfc;
+      z-index: 100;
       transition: .5s;
 
       opacity: 0;
@@ -329,5 +330,6 @@ body.modal{
       text-transform: none;
 }
 .modal__close{
+      cursor: pointer;
       align-self: flex-end;
 }
