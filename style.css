@@ -54,8 +54,9 @@ h2 {
       text-transform: uppercase;
 }
 h3 {
+      display: flex;
       width: fit-content;
-      padding: 12px 20px;
+      padding: 20px 12px;
       border-radius: 20px;
       background: #fff;
       color: #028362;
@@ -78,3 +79,46 @@ p {
       text-transform: uppercase;
 }
 
+/* -------------- Контейнер -------------- */
+.container {
+      max-width: 1620px;
+      padding: 0 50px;
+      margin: auto;
+}
+
+/* -------------- Header -------------- */
+.header {
+      width: 100%;
+      padding: 20px 0;
+      height: 125px;
+      background: #028362;
+}
+.header-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 33px;
+}
+.header__addrress,
+.header__legal-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-left: 33px;
+}
+.header__legal-info::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: #f3f4f8;
+}
+.address__title,
+.legal-info__title {
+      display: flex;
+      gap: 16px;
+}
